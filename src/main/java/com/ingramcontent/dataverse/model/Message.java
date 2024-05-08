@@ -6,12 +6,33 @@ package com.ingramcontent.dataverse.model;
 
 public class Message implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Message() {
-    }
+	private java.lang.String key;
+	private java.lang.String message;
 
+	public Message() {
+	}
 
+	public java.lang.String getKey() {
+		return this.key;
+	}
 
+	public void setKey(java.lang.String key) {
+		this.key = key;
+	}
+
+	public java.lang.String getMessage() {
+		return this.message;
+	}
+
+	public void setMessage(java.lang.String message) {
+		this.message = message;
+	}
+
+	public Message(java.lang.String key, java.lang.String message) {
+		this.key = key;
+		this.message = message;
+	}
 
 }
