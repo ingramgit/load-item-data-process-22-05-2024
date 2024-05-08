@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_OgSdoA06Ee-waJKJ0lWXfQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_64u18A0-Ee-waJKJ0lWXfQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_kafkaRequestItem" structureRef="com.ingramcontent.dataverse.model.KafkaRequest"/>
   <bpmn2:itemDefinition id="_kafkaResponseItem" structureRef="Object"/>
-  <bpmn2:process id="load-item-data-process.loadItemDataProcess" drools:packageName="com.ingramcontent.dataverse" drools:version="1.0" drools:adHoc="false" name="loadItemDataProcess" isExecutable="true" processType="Public">
+  <bpmn2:process id="loadItemDataProcess" drools:packageName="com.ingramcontent.dataverse" drools:version="1.0" drools:adHoc="false" name="loadItemDataProcess" isExecutable="true" processType="Public">
     <bpmn2:property id="kafkaRequest" itemSubjectRef="_kafkaRequestItem" name="kafkaRequest"/>
     <bpmn2:property id="kafkaResponse" itemSubjectRef="_kafkaResponseItem" name="kafkaResponse"/>
     <bpmn2:sequenceFlow id="_CEB871C7-BF93-4774-8B94-5F258C8D655A" sourceRef="_F8DAFDB7-82B2-4472-BDC2-754287E2911C" targetRef="_392C35DF-9F56-46F7-892C-28D74B1C3C44">
@@ -44,8 +44,8 @@ System.out.println("******** End Kafka Load Process *********");]]></bpmn2:scrip
       <bpmn2:outgoing>_A02B6C8E-9D37-4B96-ADC1-E655AFD9EAD7</bpmn2:outgoing>
     </bpmn2:startEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_OgSdoQ06Ee-waJKJ0lWXfQ">
-    <bpmndi:BPMNPlane id="_OgSdog06Ee-waJKJ0lWXfQ" bpmnElement="load-item-data-process.loadItemDataProcess">
+  <bpmndi:BPMNDiagram id="_64u18Q0-Ee-waJKJ0lWXfQ">
+    <bpmndi:BPMNPlane id="_64u18g0-Ee-waJKJ0lWXfQ" bpmnElement="loadItemDataProcess">
       <bpmndi:BPMNShape id="shape__DFFC91C6-41A9-4FE0-B694-6AC4B78236F1" bpmnElement="_DFFC91C6-41A9-4FE0-B694-6AC4B78236F1">
         <dc:Bounds height="56.0" width="56.0" x="276.0" y="102.0"/>
       </bpmndi:BPMNShape>
@@ -65,19 +65,19 @@ System.out.println("******** End Kafka Load Process *********");]]></bpmn2:scrip
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_OgSdow06Ee-waJKJ0lWXfQ" type="BPSimData">
+  <bpmn2:relationship id="_64u18w0-Ee-waJKJ0lWXfQ" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_DFFC91C6-41A9-4FE0-B694-6AC4B78236F1" id="_OgSdpA06Ee-waJKJ0lWXfQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_DFFC91C6-41A9-4FE0-B694-6AC4B78236F1" id="_64u19A0-Ee-waJKJ0lWXfQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F8DAFDB7-82B2-4472-BDC2-754287E2911C" id="_OgSdpQ06Ee-waJKJ0lWXfQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F8DAFDB7-82B2-4472-BDC2-754287E2911C" id="_64u19Q0-Ee-waJKJ0lWXfQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -100,7 +100,7 @@ System.out.println("******** End Kafka Load Process *********");]]></bpmn2:scrip
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_OgSdoA06Ee-waJKJ0lWXfQ</bpmn2:source>
-    <bpmn2:target>_OgSdoA06Ee-waJKJ0lWXfQ</bpmn2:target>
+    <bpmn2:source>_64u18A0-Ee-waJKJ0lWXfQ</bpmn2:source>
+    <bpmn2:target>_64u18A0-Ee-waJKJ0lWXfQ</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
