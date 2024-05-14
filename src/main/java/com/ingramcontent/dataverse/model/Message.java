@@ -11,8 +11,6 @@ public class Message implements java.io.Serializable {
 	private java.lang.String key;
 	private java.lang.String message;
 
-	private java.lang.String status;
-
 	private java.lang.String created_date;
 
 	private java.lang.Long processId;
@@ -36,14 +34,6 @@ public class Message implements java.io.Serializable {
 		this.message = message;
 	}
 
-	public java.lang.String getStatus() {
-		return this.status;
-	}
-
-	public void setStatus(java.lang.String status) {
-		this.status = status;
-	}
-
 	public java.lang.String getCreated_date() {
 		return this.created_date;
 	}
@@ -61,11 +51,9 @@ public class Message implements java.io.Serializable {
 	}
 
 	public Message(java.lang.String key, java.lang.String message,
-			java.lang.String status, java.lang.String created_date,
-			java.lang.Long processId) {
+			java.lang.String created_date, java.lang.Long processId) {
 		this.key = key;
 		this.message = message;
-		this.status = status;
 		this.created_date = created_date;
 		this.processId = processId;
 	}
