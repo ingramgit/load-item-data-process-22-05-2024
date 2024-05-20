@@ -4,7 +4,7 @@ import com.ingramcontent.dataverse.model.Signal;
 import com.ingramcontent.dataverse.model.Processor;
 
 rule "Item Load Pipeline"
-    ruleflow-group 'itemLoadPipeline'
+    ruleflow-group 'pipelineCodeRule'
 	when 
 		signal: Signal("ItemLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 7000);
 		processor: Processor();
@@ -13,7 +13,7 @@ rule "Item Load Pipeline"
 	end
 	
 rule "Publisher Load Pipeline"
-    ruleflow-group 'publisherLoadPipeline'
+    ruleflow-group 'pipelineCodeRule'
 	when 
 		signal: Signal("PublisherLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 5000);
 		processor: Processor();
