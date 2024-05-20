@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.dataverse</groupId>
   <artifactId>load-item-data-process</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2-SNAPSHOT</version>
   <packaging>kjar</packaging>
   <name>load-item-data-process</name>
   <description>Call kafka API to load the item data</description>
