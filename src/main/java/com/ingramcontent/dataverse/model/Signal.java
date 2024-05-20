@@ -6,12 +6,54 @@ package com.ingramcontent.dataverse.model;
 
 public class Signal implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Signal() {
-    }
+	private java.lang.String pipelineCode;
+	private java.lang.String taskName;
+	private java.lang.String fileName;
+	private long totalRecord;
 
+	public Signal() {
+	}
 
+	public java.lang.String getPipelineCode() {
+		return this.pipelineCode;
+	}
 
+	public void setPipelineCode(java.lang.String pipelineCode) {
+		this.pipelineCode = pipelineCode;
+	}
+
+	public java.lang.String getTaskName() {
+		return this.taskName;
+	}
+
+	public void setTaskName(java.lang.String taskName) {
+		this.taskName = taskName;
+	}
+
+	public java.lang.String getFileName() {
+		return this.fileName;
+	}
+
+	public void setFileName(java.lang.String fileName) {
+		this.fileName = fileName;
+	}
+
+	public long getTotalRecord() {
+		return this.totalRecord;
+	}
+
+	public void setTotalRecord(long totalRecord) {
+		this.totalRecord = totalRecord;
+	}
+
+	public Signal(java.lang.String pipelineCode, java.lang.String taskName,
+			java.lang.String fileName, long totalRecord) {
+		this.pipelineCode = pipelineCode;
+		this.taskName = taskName;
+		this.fileName = fileName;
+		this.totalRecord = totalRecord;
+	}
 
 }
