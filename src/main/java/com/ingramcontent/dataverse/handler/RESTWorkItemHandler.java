@@ -829,9 +829,9 @@ public class RESTWorkItemHandler extends AbstractLogOrThrowWorkItemHandler imple
                             "request to endpoint " + urlStr + " successfully completed " + statusLine.getReasonPhrase());
             } else {
                 if (handleException) {
-                    handleException(new RESTServiceException(responseCode,
-                                                             responseBody,
-                                                             urlStr));
+                    //handleException(new RESTServiceException(responseCode,
+                    //                                         responseBody,
+                    //                                         urlStr));
                 } else {
                     logger.warn("Unsuccessful response from REST server (status: {}, endpoint: {}, response: {}",
                                 responseCode,
