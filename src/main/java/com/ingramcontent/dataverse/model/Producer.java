@@ -6,12 +6,75 @@ package com.ingramcontent.dataverse.model;
 
 public class Producer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Producer() {
-    }
+	private java.lang.Long processId;
+	private java.lang.String conatinerId;
+	private java.lang.String signalName;
+	private java.lang.String pipelineCode;
+	private java.lang.String taskName;
+	private java.lang.String createdDate;
 
+	public Producer() {
+	}
 
+	public java.lang.Long getProcessId() {
+		return this.processId;
+	}
 
+	public void setProcessId(java.lang.Long processId) {
+		this.processId = processId;
+	}
+
+	public java.lang.String getConatinerId() {
+		return this.conatinerId;
+	}
+
+	public void setConatinerId(java.lang.String conatinerId) {
+		this.conatinerId = conatinerId;
+	}
+
+	public java.lang.String getSignalName() {
+		return this.signalName;
+	}
+
+	public void setSignalName(java.lang.String signalName) {
+		this.signalName = signalName;
+	}
+
+	public java.lang.String getPipelineCode() {
+		return this.pipelineCode;
+	}
+
+	public void setPipelineCode(java.lang.String pipelineCode) {
+		this.pipelineCode = pipelineCode;
+	}
+
+	public java.lang.String getTaskName() {
+		return this.taskName;
+	}
+
+	public void setTaskName(java.lang.String taskName) {
+		this.taskName = taskName;
+	}
+
+	public java.lang.String getCreatedDate() {
+		return this.createdDate;
+	}
+
+	public void setCreatedDate(java.lang.String createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public Producer(java.lang.Long processId, java.lang.String conatinerId,
+			java.lang.String signalName, java.lang.String pipelineCode,
+			java.lang.String taskName, java.lang.String createdDate) {
+		this.processId = processId;
+		this.conatinerId = conatinerId;
+		this.signalName = signalName;
+		this.pipelineCode = pipelineCode;
+		this.taskName = taskName;
+		this.createdDate = createdDate;
+	}
 
 }
