@@ -9,7 +9,7 @@ rule "Item Load Pipeline"
 		signal: Signal("ItemLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 7000);
 		processor: Processor();
 	then
-		processor.isInitialLoad(true);
+		processor.setIsInitialLoad(true);
 	end
 	
 rule "Publisher Load Pipeline"
@@ -18,5 +18,5 @@ rule "Publisher Load Pipeline"
 		signal: Signal("PublisherLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 5000);
 		processor: Processor();
 	then
-		processor.isInitialLoad(true);
+		processor.setIsInitialLoad(true);
 	end	
