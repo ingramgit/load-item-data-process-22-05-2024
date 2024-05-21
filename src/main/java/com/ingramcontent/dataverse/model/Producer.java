@@ -15,6 +15,10 @@ public class Producer implements java.io.Serializable {
 	private java.lang.String taskName;
 	private java.lang.String createdDate;
 
+	private java.lang.String dataverseProcessId;
+
+	private java.lang.String requestType;
+
 	public Producer() {
 	}
 
@@ -66,15 +70,34 @@ public class Producer implements java.io.Serializable {
 		this.createdDate = createdDate;
 	}
 
+	public java.lang.String getDataverseProcessId() {
+		return this.dataverseProcessId;
+	}
+
+	public void setDataverseProcessId(java.lang.String dataverseProcessId) {
+		this.dataverseProcessId = dataverseProcessId;
+	}
+
+	public java.lang.String getRequestType() {
+		return this.requestType;
+	}
+
+	public void setRequestType(java.lang.String requestType) {
+		this.requestType = requestType;
+	}
+
 	public Producer(java.lang.Long processId, java.lang.String conatinerId,
 			java.lang.String signalName, java.lang.String pipelineCode,
-			java.lang.String taskName, java.lang.String createdDate) {
+			java.lang.String taskName, java.lang.String createdDate,
+			java.lang.String dataverseProcessId, java.lang.String requestType) {
 		this.processId = processId;
 		this.conatinerId = conatinerId;
 		this.signalName = signalName;
 		this.pipelineCode = pipelineCode;
 		this.taskName = taskName;
 		this.createdDate = createdDate;
+		this.dataverseProcessId = dataverseProcessId;
+		this.requestType = requestType;
 	}
 
 }
