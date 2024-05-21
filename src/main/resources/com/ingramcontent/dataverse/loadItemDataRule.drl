@@ -6,7 +6,7 @@ import com.ingramcontent.dataverse.model.Processor;
 rule "Item Load Pipeline"
     ruleflow-group 'pipelineCodeRule'
 	when 
-		signal: Signal("ItemLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 7000);
+		//signal: Signal("ItemLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 7000);
 		processor: Processor();
 	then
 		processor.setIsInitialLoad(true);
