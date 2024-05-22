@@ -1,7 +1,7 @@
 package com.ingramcontent.dataverse;
 
 import com.ingramcontent.dataverse.model.Signal;
-import com.ingramcontent.dataverse.model.Processor;
+import com.ingramcontent.dataverse.model.Xformer;
 
 rule "Item Load Pipeline"
     ruleflow-group 'pipelineCodeRule'
@@ -10,9 +10,9 @@ rule "Item Load Pipeline"
 		        && totalRecord != null 
 		        && list.size() > 0
 		        && list.get(0) > 7000);
-		processor: Processor();
+		xformer: Xformer();
 	then
-		processor.setIsInitialLoad(true);
+		xformer.setIsInitialLoad(true);
 	end
 	
 rule "Publisher Load Pipeline"
@@ -22,7 +22,7 @@ rule "Publisher Load Pipeline"
 		        && totalRecord != null 
 		        && list.size() > 0
 		        && list.get(0) > 5000);
-		processor: Processor();
+		xformer: Xformer();
 	then
-		processor.setIsInitialLoad(true);
+		xformer.setIsInitialLoad(true);
 	end	
