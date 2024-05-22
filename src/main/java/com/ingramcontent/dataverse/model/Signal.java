@@ -10,8 +10,9 @@ public class Signal implements java.io.Serializable {
 
 	private java.lang.String pipelineCode;
 	private java.lang.String taskName;
-	private java.lang.String fileName;
-	private long totalRecord;
+	private java.util.List<java.lang.String> fileName;
+
+	private java.util.List<java.lang.Integer> totalRecord;
 
 	public Signal() {
 	}
@@ -32,24 +33,25 @@ public class Signal implements java.io.Serializable {
 		this.taskName = taskName;
 	}
 
-	public java.lang.String getFileName() {
+	public java.util.List<java.lang.String> getFileName() {
 		return this.fileName;
 	}
 
-	public void setFileName(java.lang.String fileName) {
+	public void setFileName(java.util.List<java.lang.String> fileName) {
 		this.fileName = fileName;
 	}
 
-	public long getTotalRecord() {
+	public java.util.List<java.lang.Integer> getTotalRecord() {
 		return this.totalRecord;
 	}
 
-	public void setTotalRecord(long totalRecord) {
+	public void setTotalRecord(java.util.List<java.lang.Integer> totalRecord) {
 		this.totalRecord = totalRecord;
 	}
 
 	public Signal(java.lang.String pipelineCode, java.lang.String taskName,
-			java.lang.String fileName, long totalRecord) {
+			java.util.List<java.lang.String> fileName,
+			java.util.List<java.lang.Integer> totalRecord) {
 		this.pipelineCode = pipelineCode;
 		this.taskName = taskName;
 		this.fileName = fileName;
