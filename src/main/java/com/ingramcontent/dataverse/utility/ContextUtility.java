@@ -19,6 +19,11 @@ public class ContextUtility implements java.io.Serializable {
 		return instance.getVariable(variable);		
 	}
 	
+	public static void setProcessVariable(ProcessContext context, String variable, Object obj) {
+		WorkflowProcessInstance instance = (WorkflowProcessInstance) context.getProcessInstance();
+		instance.setVariable(variable, obj);
+	}	
+	
 	public static long getInstanceId(ProcessContext context) {
 		return context.getProcessInstance().getId();
 	}
