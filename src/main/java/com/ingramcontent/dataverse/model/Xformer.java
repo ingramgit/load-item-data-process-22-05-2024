@@ -14,6 +14,14 @@ public class Xformer implements java.io.Serializable {
 	private java.lang.Boolean isInitialLoad;
 	private java.lang.String createdDate;
 
+	private java.lang.String conatinerId;
+
+	private java.lang.String dataverseProcessId;
+
+	private long processId;
+
+	private java.lang.String requestType;
+
 	public Xformer() {
 	}
 
@@ -57,14 +65,52 @@ public class Xformer implements java.io.Serializable {
 		this.createdDate = createdDate;
 	}
 
+	public java.lang.String getConatinerId() {
+		return this.conatinerId;
+	}
+
+	public void setConatinerId(java.lang.String conatinerId) {
+		this.conatinerId = conatinerId;
+	}
+
+	public java.lang.String getDataverseProcessId() {
+		return this.dataverseProcessId;
+	}
+
+	public void setDataverseProcessId(java.lang.String dataverseProcessId) {
+		this.dataverseProcessId = dataverseProcessId;
+	}
+
+	public long getProcessId() {
+		return this.processId;
+	}
+
+	public void setProcessId(long processId) {
+		this.processId = processId;
+	}
+
+	public java.lang.String getRequestType() {
+		return this.requestType;
+	}
+
+	public void setRequestType(java.lang.String requestType) {
+		this.requestType = requestType;
+	}
+
 	public Xformer(java.lang.String pipelineCode, java.lang.String taskName,
 			java.lang.String fileName, java.lang.Boolean isInitialLoad,
-			java.lang.String createdDate) {
+			java.lang.String createdDate, java.lang.String conatinerId,
+			java.lang.String dataverseProcessId, long processId,
+			java.lang.String requestType) {
 		this.pipelineCode = pipelineCode;
 		this.taskName = taskName;
 		this.fileName = fileName;
 		this.isInitialLoad = isInitialLoad;
 		this.createdDate = createdDate;
+		this.conatinerId = conatinerId;
+		this.dataverseProcessId = dataverseProcessId;
+		this.processId = processId;
+		this.requestType = requestType;
 	}
 
 }
