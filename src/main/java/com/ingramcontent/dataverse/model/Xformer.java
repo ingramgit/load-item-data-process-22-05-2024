@@ -13,8 +13,6 @@ public class Xformer implements java.io.Serializable {
 	private java.lang.Boolean isInitialLoad;
 	private java.lang.String createdDate;
 
-	private java.lang.String conatinerId;
-
 	private java.lang.String dataverseProcessId;
 
 	private long processId;
@@ -24,6 +22,8 @@ public class Xformer implements java.io.Serializable {
 	private java.lang.String signalName;
 
 	private java.util.List<java.lang.String> fileName;
+
+	private java.lang.String containerId;
 
 	public Xformer() {
 	}
@@ -58,14 +58,6 @@ public class Xformer implements java.io.Serializable {
 
 	public void setCreatedDate(java.lang.String createdDate) {
 		this.createdDate = createdDate;
-	}
-
-	public java.lang.String getConatinerId() {
-		return this.conatinerId;
-	}
-
-	public void setConatinerId(java.lang.String conatinerId) {
-		this.conatinerId = conatinerId;
 	}
 
 	public java.lang.String getDataverseProcessId() {
@@ -108,22 +100,30 @@ public class Xformer implements java.io.Serializable {
 		this.fileName = fileName;
 	}
 
+	public java.lang.String getContainerId() {
+		return this.containerId;
+	}
+
+	public void setContainerId(java.lang.String containerId) {
+		this.containerId = containerId;
+	}
+
 	public Xformer(java.lang.String pipelineCode, java.lang.String taskName,
 			java.lang.Boolean isInitialLoad, java.lang.String createdDate,
-			java.lang.String conatinerId, java.lang.String dataverseProcessId,
-			long processId, java.lang.String requestType,
-			java.lang.String signalName,
-			java.util.List<java.lang.String> fileName) {
+			java.lang.String dataverseProcessId, long processId,
+			java.lang.String requestType, java.lang.String signalName,
+			java.util.List<java.lang.String> fileName,
+			java.lang.String containerId) {
 		this.pipelineCode = pipelineCode;
 		this.taskName = taskName;
 		this.isInitialLoad = isInitialLoad;
 		this.createdDate = createdDate;
-		this.conatinerId = conatinerId;
 		this.dataverseProcessId = dataverseProcessId;
 		this.processId = processId;
 		this.requestType = requestType;
 		this.signalName = signalName;
 		this.fileName = fileName;
+		this.containerId = containerId;
 	}
 
 }
