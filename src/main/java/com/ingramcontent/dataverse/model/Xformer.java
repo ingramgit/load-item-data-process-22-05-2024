@@ -10,7 +10,6 @@ public class Xformer implements java.io.Serializable {
 
 	private java.lang.String pipelineCode;
 	private java.lang.String taskName;
-	private java.lang.String fileName;
 	private java.lang.Boolean isInitialLoad;
 	private java.lang.String createdDate;
 
@@ -23,6 +22,8 @@ public class Xformer implements java.io.Serializable {
 	private java.lang.String requestType;
 
 	private java.lang.String signalName;
+
+	private java.util.List<java.lang.String> fileName;
 
 	public Xformer() {
 	}
@@ -41,14 +42,6 @@ public class Xformer implements java.io.Serializable {
 
 	public void setTaskName(java.lang.String taskName) {
 		this.taskName = taskName;
-	}
-
-	public java.lang.String getFileName() {
-		return this.fileName;
-	}
-
-	public void setFileName(java.lang.String fileName) {
-		this.fileName = fileName;
 	}
 
 	public java.lang.Boolean getIsInitialLoad() {
@@ -107,14 +100,22 @@ public class Xformer implements java.io.Serializable {
 		this.signalName = signalName;
 	}
 
+	public java.util.List<java.lang.String> getFileName() {
+		return this.fileName;
+	}
+
+	public void setFileName(java.util.List<java.lang.String> fileName) {
+		this.fileName = fileName;
+	}
+
 	public Xformer(java.lang.String pipelineCode, java.lang.String taskName,
-			java.lang.String fileName, java.lang.Boolean isInitialLoad,
-			java.lang.String createdDate, java.lang.String conatinerId,
-			java.lang.String dataverseProcessId, long processId,
-			java.lang.String requestType, java.lang.String signalName) {
+			java.lang.Boolean isInitialLoad, java.lang.String createdDate,
+			java.lang.String conatinerId, java.lang.String dataverseProcessId,
+			long processId, java.lang.String requestType,
+			java.lang.String signalName,
+			java.util.List<java.lang.String> fileName) {
 		this.pipelineCode = pipelineCode;
 		this.taskName = taskName;
-		this.fileName = fileName;
 		this.isInitialLoad = isInitialLoad;
 		this.createdDate = createdDate;
 		this.conatinerId = conatinerId;
@@ -122,6 +123,7 @@ public class Xformer implements java.io.Serializable {
 		this.processId = processId;
 		this.requestType = requestType;
 		this.signalName = signalName;
+		this.fileName = fileName;
 	}
 
 }
