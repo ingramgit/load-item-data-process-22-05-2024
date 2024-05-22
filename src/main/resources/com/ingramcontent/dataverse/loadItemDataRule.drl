@@ -8,8 +8,8 @@ rule "Item Load Pipeline"
 	when 
 		signal: Signal("ItemLoad".equalsIgnoreCase(pipelineCode) 
 		        && totalRecord != null 
-		        && list.size() > 0
-		        && list.get(0) > 7000);
+		        && totalRecord.size() > 0
+		        && totalRecord.get(0) > 7000);
 		xformer: Xformer();
 	then
 		xformer.setIsInitialLoad(true);
@@ -20,8 +20,8 @@ rule "Publisher Load Pipeline"
 	when 
 		signal: Signal("PublisherLoad".equalsIgnoreCase(pipelineCode) 
 		        && totalRecord != null 
-		        && list.size() > 0
-		        && list.get(0) > 5000);
+		        && totalRecord.size() > 0
+		        && totalRecord.get(0) > 5000);
 		xformer: Xformer();
 	then
 		xformer.setIsInitialLoad(true);
