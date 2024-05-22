@@ -9,7 +9,6 @@ public class Producer implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
 
 	private java.lang.Long processId;
-	private java.lang.String conatinerId;
 	private java.lang.String signalName;
 	private java.lang.String pipelineCode;
 	private java.lang.String taskName;
@@ -18,6 +17,8 @@ public class Producer implements java.io.Serializable {
 	private java.lang.String dataverseProcessId;
 
 	private java.lang.String requestType;
+
+	private java.lang.String containerId;
 
 	public Producer() {
 	}
@@ -28,14 +29,6 @@ public class Producer implements java.io.Serializable {
 
 	public void setProcessId(java.lang.Long processId) {
 		this.processId = processId;
-	}
-
-	public java.lang.String getConatinerId() {
-		return this.conatinerId;
-	}
-
-	public void setConatinerId(java.lang.String conatinerId) {
-		this.conatinerId = conatinerId;
 	}
 
 	public java.lang.String getSignalName() {
@@ -86,18 +79,26 @@ public class Producer implements java.io.Serializable {
 		this.requestType = requestType;
 	}
 
-	public Producer(java.lang.Long processId, java.lang.String conatinerId,
-			java.lang.String signalName, java.lang.String pipelineCode,
-			java.lang.String taskName, java.lang.String createdDate,
-			java.lang.String dataverseProcessId, java.lang.String requestType) {
+	public java.lang.String getContainerId() {
+		return this.containerId;
+	}
+
+	public void setContainerId(java.lang.String containerId) {
+		this.containerId = containerId;
+	}
+
+	public Producer(java.lang.Long processId, java.lang.String signalName,
+			java.lang.String pipelineCode, java.lang.String taskName,
+			java.lang.String createdDate, java.lang.String dataverseProcessId,
+			java.lang.String requestType, java.lang.String containerId) {
 		this.processId = processId;
-		this.conatinerId = conatinerId;
 		this.signalName = signalName;
 		this.pipelineCode = pipelineCode;
 		this.taskName = taskName;
 		this.createdDate = createdDate;
 		this.dataverseProcessId = dataverseProcessId;
 		this.requestType = requestType;
+		this.containerId = containerId;
 	}
 
 }
