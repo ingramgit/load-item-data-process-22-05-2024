@@ -1,22 +1,28 @@
 package com.ingramcontent.dataverse;
 
 import com.ingramcontent.dataverse.model.Signal;
-import com.ingramcontent.dataverse.model.Xformer;
+import com.ingramcontent.dataverse.model.Processor;
 
 rule "Item Load Pipeline"
     ruleflow-group 'pipelineCodeRule'
 	when 
-		signal: Signal("ItemLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 7000);
-		xformer: Xformer();
+		signal: Signal("ItemLoad".equalsIgnoreCase(pipelineCode) 
+		        && totalRecord != null 
+		        && list.size() > 0
+		        && list.get(0) > 7000);
+		processor: Processor();
 	then
-		xformer.setIsInitialLoad(true); 
+		processor.setIsInitialLoad(true);
 	end
 	
 rule "Publisher Load Pipeline"
     ruleflow-group 'pipelineCodeRule'
 	when 
-		signal: Signal("PublisherLoad".equalsIgnoreCase(pipelineCode) && totalRecord > 5000);
-		xformer: Xformer();
+		signal: Signal("PublisherLoad".equalsIgnoreCase(pipelineCode) 
+		        && totalRecord != null 
+		        && list.size() > 0
+		        && list.get(0) > 5000);
+		processor: Processor();
 	then
-		xformer.setIsInitialLoad(true);
+		processor.setIsInitialLoad(true);
 	end	
