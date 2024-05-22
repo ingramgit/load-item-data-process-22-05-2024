@@ -22,6 +22,8 @@ public class Xformer implements java.io.Serializable {
 
 	private java.lang.String requestType;
 
+	private java.lang.String signalName;
+
 	public Xformer() {
 	}
 
@@ -97,11 +99,19 @@ public class Xformer implements java.io.Serializable {
 		this.requestType = requestType;
 	}
 
+	public java.lang.String getSignalName() {
+		return this.signalName;
+	}
+
+	public void setSignalName(java.lang.String signalName) {
+		this.signalName = signalName;
+	}
+
 	public Xformer(java.lang.String pipelineCode, java.lang.String taskName,
 			java.lang.String fileName, java.lang.Boolean isInitialLoad,
 			java.lang.String createdDate, java.lang.String conatinerId,
 			java.lang.String dataverseProcessId, long processId,
-			java.lang.String requestType) {
+			java.lang.String requestType, java.lang.String signalName) {
 		this.pipelineCode = pipelineCode;
 		this.taskName = taskName;
 		this.fileName = fileName;
@@ -111,6 +121,7 @@ public class Xformer implements java.io.Serializable {
 		this.dataverseProcessId = dataverseProcessId;
 		this.processId = processId;
 		this.requestType = requestType;
+		this.signalName = signalName;
 	}
 
 }
